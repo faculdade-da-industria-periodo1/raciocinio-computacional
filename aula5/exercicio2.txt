@@ -1,0 +1,21 @@
+Algoritmo "quantidadeAzulejoNaParede"
+Var
+    inteiro metro_quadrado_parede, metro_quadrado_azulejo, quantidade
+    real altura_parede, largura_parede, altura_azulejo, largura_azulejo
+Inicio
+    escreva("Digite a altura da parede (metros): ")
+    leia(altura_parede)
+    escreva("Digite a largura da parede (metros): ")
+    leia(largura_parede)
+    escreva("Digite a altura do azulejo (centímetros): ")
+    leia(altura_azulejo)
+    escreva("Digite a largura da parede (centímetros): ")
+    leia(largura_azulejo)
+    
+    metro_quadrado_parede <- (altura_parede + largura_parede) * 2
+    metro_quadrado_azulejo <- ((altura_azulejo + largura_azulejo) * 2) / 100
+    
+    quantidade <- metro_quadrado_parede / metro_quadrado_azulejo
+
+    escreval("Quantidade de azulejo(s) necessário(s) para essa parade é de ", quantidade)
+Fimalgoritmo
