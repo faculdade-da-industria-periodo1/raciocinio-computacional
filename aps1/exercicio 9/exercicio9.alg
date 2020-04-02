@@ -9,8 +9,8 @@ Inicio
 	escreva("Digite a altura do retângulo: ")
 	leia(altura)
 
-    area = base * altura
-	perimetro = 2 * (base + altura)
+    area <- base * altura
+	perimetro <- 2 * (base + altura)
 
 	escreval("A área do retângulo é: ", area)
 	escreva("O perímetro do retângulo é: ", perimetro)
