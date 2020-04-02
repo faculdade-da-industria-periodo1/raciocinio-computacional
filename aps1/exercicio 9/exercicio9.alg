@@ -5,13 +5,13 @@ Var
     base, altura, area, perimetro : inteiro
 Inicio
     escreva("Digite a base do retângulo: ")
-	leia(base)
-	escreva("Digite a altura do retângulo: ")
-	leia(altura)
+    leia(base)
+    escreva("Digite a altura do retângulo: ")
+    leia(altura)
 
-	area <- base * altura
-	perimetro <- 2 * (base + altura)
+    area <- base * altura
+    perimetro <- 2 * (base + altura)
 
-	escreval("A área do retângulo é: ", area)
-	escreva("O perímetro do retângulo é: ", perimetro)
+    escreval("A área do retângulo é: ", area)
+    escreva("O perímetro do retângulo é: ", perimetro)
 Fimalgoritmo
