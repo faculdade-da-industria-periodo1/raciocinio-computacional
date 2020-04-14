@@ -1,0 +1,15 @@
+Algoritmo "exibirListadeNumerosAteNumeroDigitado"
+Var
+    num, contador: inteiro
+Inicio
+    escreva("Digite um número inteiro: ")
+    leia(num)
+    
+    se (num >= 0) entao
+        para contador de 0 ate num faca
+            escreval(contador)
+        fimpara
+    senao
+        escreval(num, " não é positivo.")
+    fimse
+Fimalgoritmo
