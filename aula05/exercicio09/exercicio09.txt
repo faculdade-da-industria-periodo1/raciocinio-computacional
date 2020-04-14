@@ -1,0 +1,18 @@
+Algoritmo "ExibirMaiorNumero"
+Var
+    contador, maior: inteiro
+    num: vetor [1..10] de inteiro
+Inicio
+    maior <- 0
+    
+    para contador de 1 ate 10 faca
+        escreva("Solicitação de número [", contador, "]: ")
+        leia(num[contador])
+
+        se (num[contador] > maior) entao
+            maior <- num[contador]
+        fimse
+    fimpara
+
+    escreval(maior, " é o maior número!")
+Fimalgoritmo
