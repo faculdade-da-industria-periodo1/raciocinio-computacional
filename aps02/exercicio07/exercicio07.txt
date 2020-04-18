@@ -1,0 +1,20 @@
+Algoritmo "maiorNumero"
+Var
+    numero, maior, contador: inteiro
+Inicio
+    maior <- 0
+    contador <- 1
+
+    enquanto contador < 10 faca
+        escreva("Digite um número #", contador, ": ")
+        leia(numero)
+        
+        se numero > maior entao
+            maior <- numero
+        fimse
+
+        contador++
+    fimenquanto
+
+    escreval("O maior número lido foi: ", maior)
+Fimalgoritmo
