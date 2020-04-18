@@ -1,0 +1,20 @@
+Algoritmo "pesoIdeal"
+Var
+    nome, sexo: caractere
+    altura, peso_ideal: real
+Inicio
+    escreva("Digite seu nome: ")
+    leia(nome)
+    escreva("Digite seu sexo (m/f): ")
+    leia(sexo)
+    escreva("Qual sua altura? ")
+    leia(altura)
+
+    se sexo = F entao
+        peso_ideal <- 62.1 * altura - 44.7
+    senao
+        peso_ideal <- 72.7 * altura - 58
+    fimse
+
+    escreval(peso_ideal)
+Fimalgoritmo
