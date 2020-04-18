@@ -1,0 +1,46 @@
+Algoritmo "segundosVividos"
+Var
+    ano, mes, dia, segundos: inteiro
+Inicio
+    escreval("Digite sua idade conforme o exemplo: 19 anos, 2 meses e 15 dias.")    
+    escreva("Anos: ")
+    leia(ano)
+    escreva("Meses: ")
+    leia(mes)
+    escreva("Dias: ")
+    leia(dia)
+    
+    se dia > 1 entao
+        dia <- dia * (60 * 60 * 24) // (60 segundos * 60 minutos * 24 horas) = 86400 segundos
+    senao
+        se dia = 1 entao
+            dia <- 86400
+        senao
+            dia <- 0
+        fimse
+    fimse
+
+    se mes > 1 entao
+        mes <- mes * (60 * 60 * 24 * 30)
+    senao
+        se mes = 1 entao
+            mes <- 2592000 // resultado de um mês convertido em segundos
+        senao
+            mes <- 0
+        fimse
+    fimse
+
+    se ano > 1 entao
+        ano <- ano * (60 * 60 * 24 * 365)
+    senao
+        se ano = 1 entao
+            ano <- 31536000 // resultado de um ano convertido em segundos
+        senao
+            ano <- 0
+        fimse
+    fimse
+
+    segundos <- ano + mes + dia
+
+    escreval("Você já viveu aproximadamente ", segundos," segundos")
+Fimalgoritmo
