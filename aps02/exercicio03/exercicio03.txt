@@ -1,0 +1,22 @@
+Algoritmo "votos"
+Var
+    validos, brancos, nulos, total: inteiro
+    percentual: real
+Inicio
+    escreva("Digite a quantidade de votos válidos: ")
+    leia(validos)
+    escreva("Digite a quantidade de votos brancos: ")
+    leia(brancos)
+    escreva("Digite a quantidade de votos nulos: ")
+    leia(nulos)
+
+    total <- validos + brancos + nulos
+    
+    percentual <- total / 3
+
+    escreval("Total de votos: ", total)
+    escreval("Percentuais:")
+    escreval(percentual, "% válidos")
+    escreval(percentual, "% brancos")
+    escreval(percentual, "% nulos")
+Fimalgoritmo
