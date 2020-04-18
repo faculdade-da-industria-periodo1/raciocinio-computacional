@@ -1,4 +1,4 @@
-Algoritmo ""
+Algoritmo "descobrirAreaTriangulo"
 Var
     base, altura, area: inteiro
 Inicio

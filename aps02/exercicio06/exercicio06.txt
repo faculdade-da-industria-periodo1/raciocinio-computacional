@@ -1,0 +1,21 @@
+Algoritmo "tipoCarteira"
+Var
+    carteira: caractere
+Inicio
+    escreval("Digite a, b, c, d ou e")    
+    escreva("Qual a categoria da sua carteira? ")
+    leia(carteira)
+    
+    escolha carteira
+    caso "a"
+        escreval("Você possui carteira para motocicleta")
+    caso "b"
+        escreval("Você possui carteira para automóvel")
+    caso "c"
+        escreval("Você possui carteira para caminhão")
+    caso "d"
+        escreval("Você possui carteira para ônibus")
+    outrocaso
+        escreval("Você possui carteira para articulado")
+    fimescolha
+Fimalgoritmo

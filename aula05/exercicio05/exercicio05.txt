@@ -1,0 +1,21 @@
+Algoritmo "estadoCivil"
+Var
+    estado: caractere
+Inicio
+    escreva("Qual seu estado civil? ")
+    leia(estado)
+    
+    se (estado == 's') entao
+        escreval("Você está solteiro(a).")
+    senao
+        se (estado == 'c') entao
+            escreval("Você está casado(a).")
+        senao
+            se (estado == 'v') entao
+                escreval("Você está viúvo(a).")
+            senao
+                escreval("Você está divorciado(a).")
+            fimse
+        fimse
+    fimse
+Fimalgoritmo

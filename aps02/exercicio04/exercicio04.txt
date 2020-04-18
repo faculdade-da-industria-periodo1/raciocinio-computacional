@@ -1,0 +1,14 @@
+Algoritmo "custoCarro"
+Var
+    custo_fabrica, custo_final, percentual_distribuidor, percentual_imposto: real
+Inicio
+    escreva("Digite o custo de fábrica do carro R$: ")
+    leia(custo_fabrica)
+
+    percentual_distribuidor <- (custo_fabrica * 28) / 100
+    percentual_imposto <- (custo_fabrica * 45) / 100
+
+    custo_final <- custo_fabrica + percentual_distribuidor + percentual_imposto
+
+    escreval("Custo final: R$", custo_final)
+Fimalgoritmo
