@@ -1,0 +1,16 @@
+Algoritmo "somarNumeroAtualComAnteriores"
+Var
+    entrada, resultado: inteiro
+Inicio
+    entrada <- 0
+    resultado <- 0
+
+    repita
+        escreva("Digite um número: ")
+        leia(entrada)
+
+        resultado <- resultado + entrada
+    ate  
+
+    escreval("Resultado: ", resultado)
+Fimalgoritmo
