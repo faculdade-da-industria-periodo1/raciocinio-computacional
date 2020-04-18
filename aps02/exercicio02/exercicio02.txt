@@ -1,0 +1,29 @@
+Algoritmo "reajusteSalarial"
+Var
+    tempo_trabalho, dependentes: inteiro
+    salario, reajuste, salario_reajustado: real
+    sexo: caractere
+Inicio
+    escreva("Digite seu salário: ")
+    leia(salario)
+    escreva("Quanto tempo de trabalho? ")
+    leia(tempo_trabalho)
+    escreva("Digite seu sexo (m/f): ")
+    leia(sexo)
+    escreva("Quantos dependentes? (0 = nenhum): ")
+    leia(dependentes)
+
+    se (sexo = M e tempo_trabalho >= 10) ou (sexo = F e tempo_trabalho >= 8) entao
+        reajuste <- (salario * 5) / 100
+    senao
+        reajuste <- (salario * 3) / 100
+    fimse
+
+    se dependentes > 1 entao
+        reajuste <- (salario * 2) / 100
+    fimse
+
+    salario_reajustado <- salario + reajuste
+
+    escreval("Novo salário é: R$", salario_reajustado)
+Fimalgoritmo
