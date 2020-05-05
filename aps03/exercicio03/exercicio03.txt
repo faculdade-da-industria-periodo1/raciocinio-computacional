@@ -1,0 +1,33 @@
+Algoritmo "calculadoraTroco"
+Var
+    valor_compra, valor_pagamento, troco, nota_cem, nota_dez, nota_um: real
+Inicio
+    escreva("Digite o valor total da compra: ")
+    leia(valor_compra)
+
+    escreva("Digite o valor total do pagamento: ")
+    leia(valor_pagamento)
+
+    troco <- valor_pagamento - valor_compra
+
+    nota_cem <- troco / 100
+
+    se (nota_cem > 0) entao
+	   nota_dez <- troco - (nota_cem * 100)
+	   nota_dez <- nota_dez / 10
+    senao
+        nota_dez <- troco / 10
+    fimse
+
+    se (nota_dez > 0) entao
+	   nota_um <- troco - ((nota_cem * 100) + (nota_dez * 10))
+	   nota_um <- nota_um / 1
+    senao
+	   nota_um <- troco / 1
+    fimse
+
+    escreval("Valor do troco: R$", troco)
+    escreval("Quantidade de notas de 100 para troco: ", nota_cem)
+    escreval("Quantidade de notas de 10 para troco: ", nota_dez)
+    escreval("Quantidade de notas de 1 para troco: ", nota_um)
+Fimalgoritmo
