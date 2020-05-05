@@ -4,13 +4,13 @@ Var
     nome: vetor[1..10] de caractere
 
 // Função para verificar se existe um nome cadastrado na posição digitada
-funcao buscarPosicao(posicao: inteiro): caractere
-var resultado: caractere
+funcao buscarPosicao(posicao: inteiro): inteiro
+var resultado: inteiro
 inicio
-	se (nome[posicao]) entao
-        resultado <- "O nome cadastrado na posição ", posicao, " é ", nome[posicao]
-    senao
-        resultado <- "Não encontramos nenhum nome cadastrado nessa posição"
+   se nome[posicao] <> "" entao
+        resultado <- 1
+   senao
+        resultado <- 0
     fimse
 
     retorne resultado
@@ -63,22 +63,26 @@ fimprocedimento
 procedimento menuBuscaPosicao()
 var numero: inteiro
 inicio
-    repita
-        escreva("Digite uma posição para verificar o nome cadastrado: ")
-        leia(numero)
-    ate (numero < 0 e numero > 11)
+    escreva("Digite uma posição para verificar o nome cadastrado: ")
+    leia(numero)
     
-    escreval(buscarPosicao(numero))
+    se (numero > 0) e (numero < 11) entao
+       se buscarPosicao(numero) = 1 entao
+          escreval("O nome cadastrado na posição",numero," é ",nome[numero])
+       senao
+          escreval("Não encontramos nenhum nome cadastrado nessa posição")
+       fimse
 
-    repita
-        escreval()
-        escreva("Deseja continuar? (1 - sim, 2 - não): ")
-        leia(continuar)
-    ate (continuar > 2 e continuar < 1)
+       escreval()
+       escreva("Deseja continuar? (1 - sim, 2 - não): ")
+       leia(continuar)
 
-    se (continuar = 1) entao
-        limpatela
-        menu()
+       se continuar = 1 entao
+           limpatela
+           menu()
+       fimse
+    senao
+       menuBuscaPosicao()
     fimse
 fimprocedimento
 
@@ -95,23 +99,21 @@ inicio
 
     para contador de 1 ate 10 faca
         se (pesquisa = nome[contador]) entao
-            escreval("O nome ", pesquisa, " está cadastrado na posição ", contador)
+            escreval("O nome ",nome[contador]," está cadastrado na posição",contador)
         senao
-            verificar++;
+            verificar <- verificar + 1
         fimse
     fimpara
 
-    se (verificar >= 10) entao
-        escreval("O nome ", pesquisa, " não foi encontrado")	
+    se (verificar > 9) entao
+        escreval("O nome ",pesquisa," não foi encontrado")
     fimse
 
-    repita
-        escreval()
-        escreva("Deseja continuar? (1 - sim, 2 - não): ")
-        leia(continuar)
-    ate (continuar > 2 e continuar < 1)
+    escreval()
+    escreva("Deseja continuar? (1 - sim, 2 - não): ")
+    leia(continuar)
 
-    se (continuar = 1) entao
+    se continuar = 1 entao
         limpatela
         menu()
     fimse
@@ -119,25 +121,29 @@ fimprocedimento
 
 // Procedimento que exibe todos os usuários cadastrados na tela
 procedimento menuImprimir()
+var verificar: inteiro
 inicio
+    verificar <- 0
+    
     para contador de 1 ate 10 faca
-        se (nome[contador] != "") entao
-            escreval("Nome #", contador, ": ", nome[contador])
-        senao
-            se (contador = 10 e nome[contador] = "") entao
-                escreval("Nenhum nome encontrado")
-                pare
+         se nome[contador] <> "" entao
+            escreval("Nome #",contador,": ",nome[contador])
+         senao
+            se nome[contador] = "" entao
+               verificar <- verificar + 1
             fimse
         fimse
     fimpara
+    
+    se verificar > 9 entao
+       escreval("Nenhum nome encontrado")
+    fimse
 
-    repita
-        escreval()
-        escreva("Deseja continuar? (1 - sim, 2 - não): ")
-        leia(continuar)
-    ate (continuar > 2 e continuar < 1)
+    escreval()
+    escreva("Deseja continuar? (1 - sim, 2 - não): ")
+    leia(continuar)
 
-    se (continuar = 1) entao
+    se continuar = 1 entao
         limpatela
         menu()
     fimse
