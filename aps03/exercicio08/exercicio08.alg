@@ -1,0 +1,154 @@
+Algoritmo "cadastroConsultaNome"
+Var
+    contador, continuar: inteiro
+    nome: vetor[1..10] de caractere
+
+// Função para verificar se existe um nome cadastrado na posição digitada
+funcao buscarPosicao(posicao: inteiro): inteiro
+var resultado: inteiro
+inicio
+   se nome[posicao] <> "" entao
+        resultado <- 1
+   senao
+        resultado <- 0
+    fimse
+
+    retorne resultado
+fimfuncao
+
+// Procedimento do menu
+procedimento menu()
+var opcao: inteiro
+inicio
+    escreval("+----- ### MENU ### -----+")
+    escreval("| 1 – Cadastrar nomes    |")
+    escreval("| 2 – Buscar por posição |")
+    escreval("| 3 – Buscar por nome    |")
+    escreval("| 4 – Imprimir nomes     |")
+    escreval("+------------------------+")
+
+    escreva("Digite uma opção do menu: ")
+    leia(opcao)
+
+    escolha opcao
+        caso 1
+            menuCadastro()
+        caso 2
+            menuBuscaPosicao()
+        caso 3
+            menuBuscaNome()
+        caso 4
+            menuImprimir()
+        outrocaso
+            limpatela
+            escreval()
+            escreval("Digite um número entre 1 e 4.")
+            menu()
+    fimescolha
+fimprocedimento
+
+// Procedimento de cadastro dos usuários
+procedimento menuCadastro()
+inicio
+    para contador de 1 ate 10 faca
+        escreva("Digite nome #", contador, ": ")
+        leia(nome[contador])
+    fimpara
+
+    limpatela
+    menu()
+fimprocedimento
+
+// Procedimento de busca por posição
+procedimento menuBuscaPosicao()
+var numero: inteiro
+inicio
+    escreva("Digite uma posição para verificar o nome cadastrado: ")
+    leia(numero)
+    
+    se (numero > 0) e (numero < 11) entao
+       se buscarPosicao(numero) = 1 entao
+          escreval("O nome cadastrado na posição",numero," é ",nome[numero])
+       senao
+          escreval("Não encontramos nenhum nome cadastrado nessa posição")
+       fimse
+
+       escreval()
+       escreva("Deseja continuar? (1 - sim, 2 - não): ")
+       leia(continuar)
+
+       se continuar = 1 entao
+           limpatela
+           menu()
+       fimse
+    senao
+       menuBuscaPosicao()
+    fimse
+fimprocedimento
+
+// Procedimento de busca por nome
+procedimento menuBuscaNome()
+var
+    verificar: inteiro
+    pesquisa: caractere
+inicio
+    escreva("Digite um nome para verificar se está cadastrado: ")
+    leia(pesquisa)
+
+    verificar <- 0
+
+    para contador de 1 ate 10 faca
+        se (pesquisa = nome[contador]) entao
+            escreval("O nome ",nome[contador]," está cadastrado na posição",contador)
+        senao
+            verificar <- verificar + 1
+        fimse
+    fimpara
+
+    se (verificar > 9) entao
+        escreval("O nome ",pesquisa," não foi encontrado")
+    fimse
+
+    escreval()
+    escreva("Deseja continuar? (1 - sim, 2 - não): ")
+    leia(continuar)
+
+    se continuar = 1 entao
+        limpatela
+        menu()
+    fimse
+fimprocedimento
+
+// Procedimento que exibe todos os usuários cadastrados na tela
+procedimento menuImprimir()
+var verificar: inteiro
+inicio
+    verificar <- 0
+    
+    para contador de 1 ate 10 faca
+         se nome[contador] <> "" entao
+            escreval("Nome #",contador,": ",nome[contador])
+         senao
+            se nome[contador] = "" entao
+               verificar <- verificar + 1
+            fimse
+        fimse
+    fimpara
+    
+    se verificar > 9 entao
+       escreval("Nenhum nome encontrado")
+    fimse
+
+    escreval()
+    escreva("Deseja continuar? (1 - sim, 2 - não): ")
+    leia(continuar)
+
+    se continuar = 1 entao
+        limpatela
+        menu()
+    fimse
+fimprocedimento
+
+Inicio
+    menu()
+Fimalgoritmo
