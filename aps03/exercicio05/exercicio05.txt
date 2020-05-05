@@ -1,0 +1,16 @@
+Algoritmo "numerosPerfeitos"
+Var
+    numero, contador: inteiro
+Inicio
+    escreval("Descubra os números perfeitos do número que você digitar!")
+    escreva("Digite um número: ")
+    leia(numero)
+    
+    escreval("Números perfeitos entre 1 e [", numero, "]:")
+    
+    para contador de 1 ate 10 faca
+        se ((numero % contador) = 0) entao
+            escreval(contador)
+        fimse
+    fimpara
+Fimalgoritmo
