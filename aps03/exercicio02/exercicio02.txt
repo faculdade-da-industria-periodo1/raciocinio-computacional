@@ -1,0 +1,19 @@
+Algoritmo "inversorData"
+Var
+    data, contador: inteiro
+    data_invertida: vetor[0..5] de inteiro
+Inicio
+    escreva("Digite uma data (DDMMAA): ")
+	leia(data)
+
+	data_invertida[0] <- (data / 1) % 10
+	data_invertida[1] <- (data / 10) % 10
+	data_invertida[2] <- (data / 100) % 10
+	data_invertida[3] <- (data / 1000) % 10
+	data_invertida[4] <- (data / 10000) % 10
+	data_invertida[5] <- (data / 100000) % 10
+
+    para contador de 0 ate 5 faca
+        escreva(data_invertida[contador])
+    fimpara
+Fimalgoritmo
