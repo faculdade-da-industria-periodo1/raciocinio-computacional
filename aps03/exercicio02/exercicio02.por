@@ -15,9 +15,12 @@ programa
 		data_invertida[4] = (data / 10000) % 10
 		data_invertida[5] = (data / 100000) % 10
 
-		para(contador = 0; contador < 6; contador++) {
-			escreva(data_invertida[contador])
-		}
+		escreva(data_invertida[1])
+		escreva(data_invertida[0])
+		escreva(data_invertida[3])
+		escreva(data_invertida[2])
+		escreva(data_invertida[5])
+		escreva(data_invertida[4], "\n")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -25,7 +28,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 463; 
+ * @POSICAO-CURSOR = 522; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
