@@ -1,0 +1,66 @@
+Algoritmo "desenhoRentangulo"
+Var
+    linhas, colunas, x, y: inteiro
+Inicio
+    repita
+        escreva("Número de linhas: ")
+        leia(linhas)
+    ate (linhas <= 3)
+
+    repita
+        escreva("Número de colunas: ")
+        leia(colunas)	
+    ate (colunas <= 3)
+
+    para x de 1 ate linhas faca
+        se (x = 1 ou x = linhas) entao
+            para y de 1 ate colunas faca
+                se (y = colunas) entao
+                    escreval("+")
+                senao
+                    escreva("+")
+                fimse
+            fimpara
+        senao
+            para y de 1 ate colunas faca
+                se (y = 1) entao
+                    escreva("+")
+                senao
+                    se (y = colunas) entao
+                        escreva("+\n")
+                    senao
+                        escreva(" ")
+                    fimse
+                fimse
+            fimpara
+        fimse
+    fimpara
+
+    para x de 1 ate linhas faca
+        se (x = 1 ou x = linhas) entao
+            para y de 1 ate colunas faca
+                se (y = 1) entao
+                    escreva("+")
+                senao
+                    se (y = colunas) entao
+                        escreval("+")
+                    senao
+                        escreva("-")
+                    fimse
+                fimse
+            fimpara
+        senao
+            para y de 1 ate colunas faca
+                se (y = 1) entao
+                    escreva("|")
+                senao
+                    se (y = colunas) entao
+                        escreva("|")
+                    senao
+                        escreva(" ")
+                    fimse
+                fimse
+            fimpara
+        fimse
+    fimpara
+Fimalgoritmo

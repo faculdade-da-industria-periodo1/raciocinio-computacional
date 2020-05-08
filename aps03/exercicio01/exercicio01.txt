@@ -1,0 +1,11 @@
+Algoritmo "ConversorFenrenheitCelsius"
+Var
+    temperatura, celsius: real
+Inicio
+    escreva("Digite a temperatura em Fahrenheit: ")
+    leia(temperatura)
+    
+    celsius <- (temperatura - 32) * 5 / 9
+
+    escreval("A temperatura digitada convertida em graus celsius é ", celsius)
+Fimalgoritmo
