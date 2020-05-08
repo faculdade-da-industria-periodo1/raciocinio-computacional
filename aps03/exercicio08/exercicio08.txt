@@ -50,7 +50,7 @@ fimprocedimento
 // Procedimento de cadastro dos usuários
 procedimento menuCadastro()
 inicio
-    para contador de 1 ate 10 faca
+    para contador de 1 ate 10 passo 1 faca
         escreva("Digite nome #", contador, ": ")
         leia(nome[contador])
     fimpara
@@ -97,7 +97,7 @@ inicio
 
     verificar <- 0
 
-    para contador de 1 ate 10 faca
+    para contador de 1 ate 10 passo 1 faca
         se (pesquisa = nome[contador]) entao
             escreval("O nome ",nome[contador]," está cadastrado na posição",contador)
         senao
@@ -125,7 +125,7 @@ var verificar: inteiro
 inicio
     verificar <- 0
     
-    para contador de 1 ate 10 faca
+    para contador de 1 ate 10 passo 1 faca
          se nome[contador] <> "" entao
             escreval("Nome #",contador,": ",nome[contador])
          senao
